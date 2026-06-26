@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CVision AI – Buat CV Profesional dengan AI</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════
+     LANDING PAGE
+════════════════════════════════════════════ -->
+<div id="page-landing">
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <div class="logo">
+      <div class="logo-icon"><i class="fa-solid fa-file-lines"></i></div>
+      CVision<span>AI</span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#features">Features</a></li>
+      <li><a href="#how">Cara Kerja</a></li>
+      <li><a href="#templates">Templates</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#" class="nav-cta" onclick="showForm(); return false;">Buat CV</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-blob"></div>
+  <div class="hero-blob2"></div>
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-content fade-up visible">
+        <div class="hero-tag"><i class="fa-solid fa-stars"></i> Didukung Teknologi AI Terkini</div>
+        <h1>Buat CV Profesional dalam <span>Hitungan Menit</span> dengan AI</h1>
+        <p>Isi data diri, biarkan AI menyusun CV profesional yang siap digunakan untuk melamar pekerjaan. Tidak perlu desain, tidak perlu template rumit.</p>
+        <div class="hero-btns">
+          <button class="btn btn-primary" onclick="showForm()"><i class="fa-solid fa-wand-magic-sparkles"></i> Buat CV Gratis</button>
+          <a href="#how" class="btn btn-ghost"><i class="fa-solid fa-play"></i> Lihat Demo</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><div class="stat-num">10K+</div><div class="stat-label">CV Dibuat</div></div>
+          <div class="stat"><div class="stat-num">95%</div><div class="stat-label">ATS Lolos</div></div>
+          <div class="stat"><div class="stat-num">4.9★</div><div class="stat-label">Rating</div></div>
+        </div>
+      </div>
+      <div class="hero-visual fade-up visible">
+        <div class="cv-mockup">
+          <div class="cv-mockup-header">
+            <div class="cv-avatar">A</div>
+            <div>
+              <div class="cv-name">Andi Pratama</div>
+              <div class="cv-role">Software Engineer</div>
+            </div>
+          </div>
+          <div class="cv-section-block">
+            <div class="cv-section-title">Professional Summary</div>
+            <div class="cv-line w90"></div>
+            <div class="cv-line w70"></div>
+            <div class="cv-line w80"></div>
+          </div>
+          <div class="cv-section-block">
+            <div class="cv-section-title">Pengalaman</div>
+            <div class="cv-line w60"></div>
+            <div class="cv-line w80"></div>
+            <div class="cv-line w70"></div>
+          </div>
+          <div class="cv-section-block">
+            <div class="cv-section-title">Skill</div>
+            <div class="cv-skills">
+              <span class="cv-skill-tag">React</span>
+              <span class="cv-skill-tag">Node.js</span>
+              <span class="cv-skill-tag">Python</span>
+              <span class="cv-skill-tag">SQL</span>
+            </div>
+          </div>
+        </div>
+        <div class="ai-badge-float">
+          <div class="icon"><i class="fa-solid fa-robot"></i></div>
+          <div>
+            <div class="text">AI Generated</div>
+            <div class="sub">Professional Summary</div>
+          </div>
+        </div>
+        <div class="ats-badge-float">
+          <div class="ats-num">92</div>
+          <div class="ats-label">ATS Score</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="section features" id="features">
+  <div class="container">
+    <div class="center fade-up">
+      <span class="section-label">Fitur Unggulan</span>
+      <h2 class="section-title">Semua yang Kamu Butuhkan untuk CV Terbaik</h2>
+      <p class="section-sub">Dari pembuatan summary hingga optimasi ATS — semua dikerjakan AI untuk kamu.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card fade-up">
+        <div class="feature-icon"><i class="fa-solid fa-robot"></i></div>
+        <h3>AI Professional Summary</h3>
+        <p>AI secara otomatis membuat deskripsi diri yang profesional, menarik, dan sesuai dengan posisi yang kamu lamar.</p>
+      </div>
+      <div class="feature-card fade-up">
+        <div class="feature-icon"><i class="fa-solid fa-check-to-slot"></i></div>
+        <h3>ATS Friendly</h3>
+        <p>AI menganalisis dan mengoptimalkan CV agar lebih mudah lolos sistem pelacak pelamar (Applicant Tracking System).</p>
+      </div>
+      <div class="feature-card fade-up">
+        <div class="feature-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+        <h3>Smart Resume Generator</h3>
+        <p>Cukup isi data — AI yang menyusun, mengedit, dan memformat seluruh isi CV dengan bahasa profesional.</p>
+      </div>
+      <div class="feature-card fade-up">
+        <div class="feature-icon"><i class="fa-solid fa-pen-to-square"></i></div>
+        <h3>Editable Preview</h3>
+        <p>CV dapat dilihat langsung dan diedit sebelum diunduh. Ganti warna, template, atau foto kapan saja.</p>
+      </div>
+      <div class="feature-card fade-up">
+        <div class="feature-icon"><i class="fa-solid fa-file-pdf"></i></div>
+        <h3>Download PDF</h3>
+        <p>Unduh CV dalam format PDF berkualitas tinggi, siap dikirim langsung ke perekrut atau HRD perusahaan.</p>
+      </div>
+      <div class="feature-card fade-up">
+        <div class="feature-icon"><i class="fa-solid fa-envelope-open-text"></i></div>
+        <h3>AI Cover Letter</h3>
+        <p>Dengan satu klik, AI membuat surat lamaran yang profesional dan dipersonalisasi sesuai perusahaan tujuan.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section how" id="how">
+  <div class="container">
+    <div class="center fade-up">
+      <span class="section-label">Cara Kerja</span>
+      <h2 class="section-title">4 Langkah Mudah Membuat CV Profesional</h2>
+      <p class="section-sub">Prosesnya sederhana — mulai dari isi data hingga unduh PDF hanya butuh beberapa menit.</p>
+    </div>
+    <div class="steps">
+      <div class="step fade-up">
+        <div class="step-num"><i class="fa-solid fa-keyboard"></i></div>
+        <h3>Isi Data</h3>
+        <p>Isi formulir dengan data pribadi, pendidikan, pengalaman, dan skill yang kamu miliki.</p>
+      </div>
+      <div class="step fade-up">
+        <div class="step-num"><i class="fa-solid fa-gear"></i></div>
+        <h3>AI Memproses</h3>
+        <p>AI secara otomatis menyusun, mengoptimalkan, dan memformat CV dengan bahasa profesional.</p>
+      </div>
+      <div class="step fade-up">
+        <div class="step-num"><i class="fa-solid fa-eye"></i></div>
+        <h3>Preview CV</h3>
+        <p>Lihat hasil CV secara langsung, edit jika perlu, dan cek skor ATS yang dihasilkan.</p>
+      </div>
+      <div class="step fade-up">
+        <div class="step-num"><i class="fa-solid fa-download"></i></div>
+        <h3>Download PDF</h3>
+        <p>Unduh CV dalam format PDF siap pakai dan kirimkan ke perusahaan impianmu.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEMPLATES -->
+<section class="section" id="templates" style="background:var(--white)">
+  <div class="container">
+    <div class="center fade-up">
+      <span class="section-label">Template CV</span>
+      <h2 class="section-title">Pilih Template yang Sesuai Gayamu</h2>
+      <p class="section-sub">5 template profesional siap pakai, semua dioptimalkan untuk ATS dan tampil memukau.</p>
+    </div>
+    <div class="templates-grid fade-up">
+      <div class="template-card active">
+        <div class="template-thumb modern">
+          <div class="t-header"></div>
+          <div class="t-line w80"></div>
+          <div class="t-line w60"></div>
+          <div class="t-line w70"></div>
+          <div class="t-line w50"></div>
+          <div class="template-badge">Popular</div>
+        </div>
+        <div class="template-info">
+          <div class="template-name">Modern</div>
+          <div class="template-desc">Bersih & kontemporer</div>
+        </div>
+      </div>
+      <div class="template-card">
+        <div class="template-thumb ats">
+          <div class="t-header"></div>
+          <div class="t-line w80"></div>
+          <div class="t-line w60"></div>
+          <div class="t-line w70"></div>
+          <div class="t-line w50"></div>
+          <div class="template-badge" style="background:#1E293B">ATS</div>
+        </div>
+        <div class="template-info">
+          <div class="template-name">ATS Friendly</div>
+          <div class="template-desc">Optimal untuk scanner</div>
+        </div>
+      </div>
+      <div class="template-card">
+        <div class="template-thumb minimal">
+          <div class="t-header"></div>
+          <div class="t-line w80"></div>
+          <div class="t-line w60"></div>
+          <div class="t-line w70"></div>
+          <div class="t-line w50"></div>
+        </div>
+        <div class="template-info">
+          <div class="template-name">Minimalist</div>
+          <div class="template-desc">Sederhana & elegan</div>
+        </div>
+      </div>
+      <div class="template-card">
+        <div class="template-thumb professional">
+          <div class="t-header"></div>
+          <div class="t-line w80"></div>
+          <div class="t-line w60"></div>
+          <div class="t-line w70"></div>
+          <div class="t-line w50"></div>
+        </div>
+        <div class="template-info">
+          <div class="template-name">Professional</div>
+          <div class="template-desc">Formal & berwibawa</div>
+        </div>
+      </div>
+      <div class="template-card">
+        <div class="template-thumb creative">
+          <div class="t-header"></div>
+          <div class="t-line w80"></div>
+          <div class="t-line w60"></div>
+          <div class="t-line w70"></div>
+          <div class="t-line w50"></div>
+        </div>
+        <div class="template-info">
+          <div class="template-name">Creative</div>
+          <div class="template-desc">Unik & berkarakter</div>
+        </div>
+      </div>
+    </div>
+    <div class="center" style="margin-top:36px;">
+      <button class="btn btn-primary" onclick="showForm()"><i class="fa-solid fa-wand-magic-sparkles"></i> Gunakan Template Ini</button>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section faq" id="faq">
+  <div class="container">
+    <div class="center fade-up">
+      <span class="section-label">FAQ</span>
+      <h2 class="section-title">Pertanyaan yang Sering Ditanyakan</h2>
+    </div>
+    <div class="faq-list fade-up">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Apakah CVision AI gratis digunakan? <i class="fa-solid fa-plus"></i></div>
+        <div class="faq-a">Ya! CVision AI sepenuhnya gratis. Kamu bisa membuat, mengedit, dan mengunduh CV dalam format PDF tanpa biaya apapun. Tidak ada biaya tersembunyi.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Apakah data saya aman? <i class="fa-solid fa-plus"></i></div>
+        <div class="faq-a">Keamanan data kamu adalah prioritas kami. Semua data yang kamu masukkan hanya diproses secara lokal dan tidak disimpan di server kami. Setelah sesi berakhir, data tidak tersimpan di mana pun.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Apakah CV bisa diedit setelah dibuat? <i class="fa-solid fa-plus"></i></div>
+        <div class="faq-a">Tentu! Setelah AI menghasilkan CV, kamu bisa mengedit setiap bagian secara langsung di halaman preview. Ubah teks, ganti warna, atau ganti template sesuai keinginan.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Apakah hasil CV bisa diunduh sebagai PDF? <i class="fa-solid fa-plus"></i></div>
+        <div class="faq-a">Ya! Setelah puas dengan hasilnya, kamu bisa langsung mengunduh CV dalam format PDF berkualitas tinggi dengan klik tombol "Download PDF". Format ini siap dikirim ke perekrut.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Apakah CV yang dibuat ATS friendly? <i class="fa-solid fa-plus"></i></div>
+        <div class="faq-a">Iya. Semua template yang tersedia sudah dioptimalkan untuk sistem ATS (Applicant Tracking System). AI juga akan memberikan skor ATS dan rekomendasi perbaikan untuk meningkatkan peluang lolos seleksi.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Apakah perlu membuat akun terlebih dahulu? <i class="fa-solid fa-plus"></i></div>
+        <div class="faq-a">Tidak perlu! CVision AI dirancang agar langsung bisa digunakan tanpa registrasi atau login. Klik "Buat CV" dan langsung mulai membuat CV profesionalmu.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="section" style="background:linear-gradient(135deg,#0F172A,#1D4ED8);padding:80px 0;">
+  <div class="container center fade-up">
+    <span class="section-label" style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.8)">Mulai Sekarang</span>
+    <h2 class="section-title" style="color:#fff;margin:0 auto 16px;max-width:600px;">Siap Membuat CV yang Membuat Perekrut Tertarik?</h2>
+    <p class="section-sub" style="color:rgba(255,255,255,.6);margin:0 auto 36px;">Gratis, cepat, dan hasilnya profesional. Mulai sekarang tanpa perlu daftar.</p>
+    <button class="btn btn-primary" style="font-size:16px;padding:16px 40px;box-shadow:0 8px 32px rgba(37,99,235,.5)" onclick="showForm()">
+      <i class="fa-solid fa-wand-magic-sparkles"></i> Buat CV Gratis Sekarang
+    </button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo" style="margin-bottom:14px;">
+          <div class="logo-icon"><i class="fa-solid fa-file-lines"></i></div>
+          CVision<span>AI</span>
+        </div>
+        <p>Platform AI untuk membuat CV profesional dengan mudah, cepat, dan tanpa biaya. Didukung teknologi kecerdasan buatan terkini.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigasi</h4>
+        <ul>
+          <li><a href="#features">Fitur</a></li>
+          <li><a href="#how">Cara Kerja</a></li>
+          <li><a href="#templates">Template</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#" onclick="showForm(); return false;">Buat CV</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Tentang Kami</h4>
+        <ul>
+          <li><a href="#">Tentang CVision AI</a></li>
+          <li><a href="#">Kontak Kami</a></li>
+          <li><a href="mailto:hello@cvisionai.id">hello@cvisionai.id</a></li>
+          <li><a href="#">Kebijakan Privasi</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 CVision AI. Dibuat dengan ❤️ untuk para pencari kerja Indonesia.</p>
+      <div class="social-links">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-github"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</div><!-- end #page-landing -->
+
+<!-- ════════════════════════════════════════════
+     FORM PAGE
+════════════════════════════════════════════ -->
+<div id="page-form">
+<nav class="navbar scrolled" style="position:fixed">
+  <div class="container">
+    <div class="logo" style="color:var(--gray-900)">
+      <div class="logo-icon"><i class="fa-solid fa-file-lines"></i></div>
+      CVision<span>AI</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:12px">
+      <button class="btn btn-outline" onclick="showLanding()" style="padding:9px 20px;font-size:13px"><i class="fa-solid fa-arrow-left"></i> Kembali</button>
+    </div>
+  </div>
+</nav>
+
+<div class="form-page">
+  <div class="form-header">
+    <div class="container">
+      <h1><i class="fa-solid fa-wand-magic-sparkles" style="color:#60A5FA;margin-right:10px"></i>Buat CV Profesionalmu</h1>
+      <p>Lengkapi data di bawah ini — AI akan menyusun CV terbaik untukmu secara otomatis.</p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="form-layout">
+      <div class="form-sidebar">
+        <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--gray-400);margin-bottom:16px">Bagian Form</div>
+        <div class="form-steps">
+          <div class="form-step-item active"><div class="step-dot">1</div><div class="step-item-label">Data Pribadi</div></div>
+          <div class="form-step-item"><div class="step-dot">2</div><div class="step-item-label">Tentang Saya</div></div>
+          <div class="form-step-item"><div class="step-dot">3</div><div class="step-item-label">Pendidikan</div></div>
+          <div class="form-step-item"><div class="step-dot">4</div><div class="step-item-label">Pengalaman</div></div>
+          <div class="form-step-item"><div class="step-dot">5</div><div class="step-item-label">Organisasi</div></div>
+          <div class="form-step-item"><div class="step-dot">6</div><div class="step-item-label">Project</div></div>
+          <div class="form-step-item"><div class="step-dot">7</div><div class="step-item-label">Skill & Bahasa</div></div>
+          <div class="form-step-item"><div class="step-dot">8</div><div class="step-item-label">Sertifikat</div></div>
+          <div class="form-step-item"><div class="step-dot">9</div><div class="step-item-label">Posisi & Template</div></div>
+        </div>
+      </div>
+      <div class="form-main">
+        <!-- Data Pribadi -->
+        <div class="form-card">
+          <h2><i class="fa-solid fa-user"></i> Data Pribadi</h2>
+          <p class="card-sub">Informasi utama yang akan tampil di bagian atas CV kamu.</p>
+          <div class="form-row">
+            <div class="form-group"><label>Nama Lengkap *</label><input type="text" id="f-nama" placeholder="contoh: Andi Pratama Wijaya" /></div>
+            <div class="form-group"><label>Email *</label><input type="email" id="f-email" placeholder="andi@email.com" /></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Nomor HP</label><input type="tel" id="f-hp" placeholder="+62 812-xxxx-xxxx" /></div>
+            <div class="form-group"><label>Kota / Alamat</label><input type="text" id="f-alamat" placeholder="Jakarta, Indonesia" /></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>LinkedIn</label><input type="url" id="f-linkedin" placeholder="linkedin.com/in/username" /></div>
+            <div class="form-group"><label>GitHub / Portfolio</label><input type="url" id="f-github" placeholder="github.com/username" /></div>
+          </div>
+          <div class="form-row single" style="margin-top:8px">
+            <div class="form-group">
+              <label>Foto Profil (Opsional)</label>
+              <div class="photo-upload" id="photoDropzone" onclick="document.getElementById('photoInput').click()">
+                <img id="photoPreview" class="photo-preview" src="" style="display:none;"/>
+                <i class="fa-solid fa-cloud-arrow-up" id="photoIcon"></i>
+                <p id="photoText">Klik untuk upload foto profil<br><small style="font-size:11px">JPG, PNG • Maks 2MB</small></p>
+              </div>
+              <input type="file" id="photoInput" accept="image/*" style="display:none" onchange="handlePhoto(this)" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Tentang Saya -->
+        <div class="form-card">
+          <h2><i class="fa-solid fa-id-card"></i> Tentang Saya</h2>
+          <p class="card-sub">Tulis singkat atau biarkan kosong — AI akan membuatkan deskripsi profesional untukmu.</p>
+          <div class="form-row single">
+            <div class="form-group"><label>Deskripsi Diri (Opsional)</label><textarea id="f-about" placeholder="Saya adalah fresh graduate S1 Ilmu Komputer yang memiliki passion di bidang pengembangan web dan data science..."></textarea></div>
+          </div>
+        </div>
+
+        <!-- Pendidikan -->
+        <div class="form-card">
+          <h2><i class="fa-solid fa-graduation-cap"></i> Pendidikan</h2>
+          <p class="card-sub">Tambahkan riwayat pendidikan, mulai dari yang terbaru.</p>
+          <div id="edu-list">
+            <div class="entry-block">
+              <button class="remove-btn" onclick="removeEntry(this)"><i class="fa-solid fa-xmark"></i></button>
+              <div class="form-row">
+                <div class="form-group"><label>Institusi</label><input type="text" placeholder="Universitas Indonesia" /></div>
+                <div class="form-group"><label>Jurusan</label><input type="text" placeholder="Ilmu Komputer" /></div>
+              </div>
+              <div class="form-row">
+                <div class="form-group"><label>Jenjang</label><select><option>S1 / Sarjana</option><option>S2 / Magister</option><option>D3 / Diploma</option><option>SMA/SMK</option></select></div>
+                <div class="form-group"><label>IPK</label><input type="text" placeholder="3.75" /></div>
+              </div>
+              <div class="form-row">
+                <div class="form-group"><label>Tahun Masuk</label><input type="text" placeholder="2020" /></div>
+                <div class="form-group"><label>Tahun Lulus</label><input type="text" placeholder="2024 / Sekarang" /></div>
+              </div>
+            </div>
+          </div>
+          <button class="add-btn" onclick="addEntry('edu-list', eduTemplate)"><i class="fa-solid fa-plus"></i> Tambah Pendidikan</button>
+        </div>
+
+        <!-- Pengalaman Kerja -->
+        <div class="form-card">
+          <h2><i class="fa-solid fa-briefcase"></i> Pengalaman Kerja</h2>
+          <p class="card-sub">Kosongkan jika belum punya — AI tetap bisa membuat CV yang kuat.</p>
+          <div id="exp-list"></div>
+          <button class="add-btn" onclick="addEntry('exp-list', expTemplate)"><i class="fa-solid fa-plus"></i> Tambah Pengalaman</button>
+        </div>
+
+        <!-- Organisasi -->
+        <div class="form-card">
+          <h2><i class="fa-solid fa-users"></i> Pengalaman Organisasi</h2>
+          <p class="card-sub">Pengalaman organisasi bisa memperkuat CV fresh graduate.</p>
+          <div id="org-list"></div>
+          <button class="add-btn" onclick="addEntry('org-list', orgTemplate)"><i class="fa-solid fa-plus"></i> Tambah Organisasi</button>
+        </div>
+
+        <!-- Project -->
+        <div class="form-card">
+          <h2><i class="fa-solid fa-code"></i> Project</h2>
+          <p class="card-sub">Tambahkan project personal, tugas kuliah, atau open source yang pernah kamu kerjakan.</p>
+          <div id="proj-list"></div>
+          <button class="add-btn" onclick="addEntry('proj-list', projTemplate)"><i class="fa-solid fa-plus"></i> Tambah Project</button>
+        </div>
+
+        <!-- Skill -->
+        <div class="form-card">
+          <h2><i class="fa-solid fa-lightbulb"></i> Skill & Bahasa</h2>
+          <p class="card-sub">Masukkan keahlian teknis maupun soft skill yang kamu miliki.</p>
+          <div class="form-row single">
+            <div class="form-group">
+              <label>Skill</label>
+              <div class="skill-input-row">
+                <input type="text" id="skillInput" placeholder="contoh: React.js, Python, Figma..." onkeydown="if(event.key==='Enter'){addSkill();event.preventDefault()}" />
+                <button class="btn btn-primary" style="padding:10px 20px;font-size:13px;border-radius:var(--radius-sm)" onclick="addSkill()">Tambah</button>
+              </div>
+              <div class="skill-tags" id="skillTags"></div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Bahasa 1</label><input type="text" id="lang1" placeholder="Bahasa Indonesia" /></div>
+            <div class="form-group"><label>Level</label><select id="lang1-level"><option>Native</option><option>Profesional</option><option>Menengah</option><option>Pemula</option></select></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Bahasa 2</label><input type="text" id="lang2" placeholder="Bahasa Inggris" /></div>
+            <div class="form-group"><label>Level</label><select id="lang2-level"><option>Profesional</option><option>Native</option><option>Menengah</option><option>Pemula</option></select></div>
+          </div>
+        </div>
+
+        <!-- Sertifikat -->
+        <div class="form-card">
+          <h2><i class="fa-solid fa-award"></i> Sertifikat</h2>
+          <p class="card-sub">Tambahkan sertifikat, penghargaan, atau lisensi yang relevan.</p>
+          <div id="cert-list"></div>
+          <button class="add-btn" onclick="addEntry('cert-list', certTemplate)"><i class="fa-solid fa-plus"></i> Tambah Sertifikat</button>
+        </div>
+
+        <!-- Posisi & Template -->
+        <div class="form-card">
+          <h2><i class="fa-solid fa-bullseye"></i> Posisi & Template CV</h2>
+          <p class="card-sub">AI akan menyesuaikan CV dengan posisi yang kamu lamar.</p>
+          <div class="form-row single">
+            <div class="form-group"><label>Posisi yang Dilamar *</label><input type="text" id="f-posisi" placeholder="contoh: Software Engineer, UI/UX Designer, Data Analyst..." /></div>
+          </div>
+          <div style="margin-top:16px">
+            <label style="font-size:13px;font-weight:600;color:var(--gray-700);display:block;margin-bottom:12px">Pilih Template CV</label>
+            <div class="template-select-grid">
+              <div class="template-opt modern-opt selected" onclick="selectTemplate(this,'modern')">
+                <div class="topt-thumb modern"><div class="template-opt-bar" style="background:var(--blue)"></div></div>
+                <div class="template-opt-name">Modern</div>
+              </div>
+              <div class="template-opt ats-opt" onclick="selectTemplate(this,'ats')">
+                <div class="topt-thumb ats"><div class="template-opt-bar" style="background:#1E293B"></div></div>
+                <div class="template-opt-name">ATS</div>
+              </div>
+              <div class="template-opt minimal-opt" onclick="selectTemplate(this,'minimal')">
+                <div class="topt-thumb minimal"><div class="template-opt-bar" style="background:#F59E0B"></div></div>
+                <div class="template-opt-name">Minimal</div>
+              </div>
+              <div class="template-opt professional-opt" onclick="selectTemplate(this,'professional')">
+                <div class="topt-thumb professional"><div class="template-opt-bar" style="background:#059669"></div></div>
+                <div class="template-opt-name">Professional</div>
+              </div>
+              <div class="template-opt creative-opt" onclick="selectTemplate(this,'creative')">
+                <div class="topt-thumb creative"><div class="template-opt-bar" style="background:#9333EA"></div></div>
+                <div class="template-opt-name">Creative</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button class="btn btn-outline" onclick="showLanding()"><i class="fa-solid fa-arrow-left"></i> Batal</button>
+          <button class="btn btn-primary" style="font-size:16px;padding:16px 40px" onclick="generateCV()"><i class="fa-solid fa-wand-magic-sparkles"></i> Generate CV dengan AI</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div><!-- end #page-form -->
+
+<!-- ════════════════════════════════════════════
+     LOADING PAGE
+════════════════════════════════════════════ -->
+<div id="page-loading">
+  <div class="loading-page">
+    <div class="loading-card">
+      <div class="ai-spinner">
+        <div class="ai-spinner-inner"><i class="fa-solid fa-robot"></i></div>
+      </div>
+      <div class="loading-title">AI Sedang Bekerja</div>
+      <div class="loading-sub" id="loadingSubtext">AI sedang menyusun CV profesional...</div>
+      <div class="loading-steps">
+        <div class="loading-step"><div class="ls-dot" id="ls1"><i class="fa-solid fa-check" style="font-size:11px"></i></div><div class="ls-label" id="ll1">Menganalisis data kamu</div></div>
+        <div class="loading-step"><div class="ls-dot" id="ls2"><i class="fa-solid fa-check" style="font-size:11px"></i></div><div class="ls-label" id="ll2">Membuat Professional Summary</div></div>
+        <div class="loading-step"><div class="ls-dot" id="ls3"><i class="fa-solid fa-check" style="font-size:11px"></i></div><div class="ls-label" id="ll3">Mengoptimalkan untuk ATS</div></div>
+        <div class="loading-step"><div class="ls-dot" id="ls4"><i class="fa-solid fa-check" style="font-size:11px"></i></div><div class="ls-label" id="ll4">Menyusun layout & format CV</div></div>
+        <div class="loading-step"><div class="ls-dot" id="ls5"><i class="fa-solid fa-check" style="font-size:11px"></i></div><div class="ls-label" id="ll5">Finalisasi & quality check</div></div>
+      </div>
+      <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+    </div>
+  </div>
+</div><!-- end #page-loading -->
+
+<!-- ════════════════════════════════════════════
+     PREVIEW PAGE
+════════════════════════════════════════════ -->
+<div id="page-preview">
+  <!-- Topbar -->
+  <div class="preview-topbar">
+    <div class="container preview-topbar-inner">
+      <div class="preview-topbar-left">
+        <div class="logo" style="color:var(--gray-900);font-size:17px">
+          <div class="logo-icon"><i class="fa-solid fa-file-lines"></i></div>
+          CVision<span style="color:var(--blue)">AI</span>
+        </div>
+        <div class="topbar-title">| Preview CV</div>
+      </div>
+      <div class="topbar-actions">
+        <button class="topbar-btn outline" onclick="requirePayment('print')"><i class="fa-solid fa-print"></i> <span>Print</span></button>
+        <button class="topbar-btn outline" onclick="requirePayment('pdf')"><i class="fa-solid fa-download"></i> <span>PDF</span></button>
+        <button class="topbar-btn danger" onclick="showForm()"><i class="fa-solid fa-rotate-left"></i> <span>Edit</span></button>
+        <button class="topbar-btn primary" onclick="showLanding()"><i class="fa-solid fa-plus"></i> <span>CV Baru</span></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="preview-page">
+    <div class="container">
+      <div class="preview-layout">
+        <!-- CV Paper -->
+        <div class="preview-center">
+          <!-- Edit toolbar -->
+          <div class="edit-toolbar">
+            <h4><i class="fa-solid fa-palette" style="color:var(--blue);margin-right:6px"></i>Warna Tema</h4>
+            <div class="color-options">
+              <div class="color-opt active" style="background:#2563EB" onclick="changeColor('#2563EB','#1D4ED8',this)" title="Biru"></div>
+              <div class="color-opt" style="background:#059669" onclick="changeColor('#059669','#047857',this)" title="Hijau"></div>
+              <div class="color-opt" style="background:#9333EA" onclick="changeColor('#9333EA','#7C3AED',this)" title="Ungu"></div>
+              <div class="color-opt" style="background:#DC2626" onclick="changeColor('#DC2626','#B91C1C',this)" title="Merah"></div>
+              <div class="color-opt" style="background:#D97706" onclick="changeColor('#D97706','#B45309',this)" title="Oranye"></div>
+              <div class="color-opt" style="background:#0F172A" onclick="changeColor('#0F172A','#1E293B',this)" title="Gelap"></div>
+            </div>
+          </div>
+          <div class="cv-paper" id="cvPaper">
+            <!-- Rendered CV goes here -->
+          </div>
+
+          <!-- Cover Letter, muncul sebagai halaman tambahan setelah di-generate -->
+          <div class="cv-paper cover-letter-page" id="coverLetterPage">
+            <div class="cover-letter-page-inner">
+              <div class="cover-letter-page-tag"><i class="fa-solid fa-envelope-open-text"></i> Halaman 2 · Cover Letter</div>
+              <div class="cover-letter-content" id="coverLetterPageContent"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Side Panel -->
+        <div class="ats-panel">
+          <!-- ATS Score -->
+          <div class="ats-card">
+            <div class="ats-header">
+              <h3><i class="fa-solid fa-chart-bar" style="color:var(--blue);margin-right:8px"></i>ATS Score</h3>
+              <span class="badge blue">Analisis AI</span>
+            </div>
+            <div class="ats-score-ring">
+              <div class="ats-score-inner">
+                <div class="ats-score-num" id="atsNum">92</div>
+                <div class="ats-score-label">/100</div>
+              </div>
+            </div>
+            <p style="text-align:center;font-size:13px;color:var(--gray-600);margin-bottom:20px">Skor <strong style="color:var(--blue)" id="atsDesc">Sangat Baik</strong> — CV kamu siap untuk melamar!</p>
+
+            <div class="ats-section">
+              <h4>✅ Kelebihan CV</h4>
+              <div class="ats-list">
+                <div class="ats-item"><div class="dot green">✓</div>Struktur CV jelas dan terorganisir</div>
+                <div class="ats-item"><div class="dot green">✓</div>Informasi kontak lengkap</div>
+                <div class="ats-item"><div class="dot green">✓</div>Pengalaman relevan dengan posisi</div>
+              </div>
+            </div>
+            <div class="ats-section">
+              <h4>🔑 Keyword Terdeteksi</h4>
+              <div class="keyword-tags" id="kwTags"></div>
+            </div>
+            <div class="ats-section">
+              <h4>⚠️ Rekomendasi</h4>
+              <div class="ats-list" id="atsTips">
+                <div class="ats-item"><div class="dot yellow">!</div>Tambahkan angka capaian di pengalaman kerja</div>
+                <div class="ats-item"><div class="dot yellow">!</div>Sertakan link portfolio jika ada</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cover Letter -->
+          <div class="cover-card">
+            <h3 style="font-size:16px;font-weight:700;color:var(--gray-900);margin-bottom:6px"><i class="fa-solid fa-envelope-open-text" style="color:var(--blue);margin-right:8px"></i>AI Cover Letter</h3>
+            <p style="font-size:13px;color:var(--gray-400);margin-bottom:16px">Generate surat lamaran otomatis dalam detik.</p>
+            <div class="cover-form">
+              <input type="text" id="coverCompany" placeholder="Nama Perusahaan (contoh: Google)" />
+              <input type="text" id="coverRole" placeholder="Posisi (contoh: Software Engineer)" />
+            </div>
+            <button class="btn btn-primary" style="width:100%;justify-content:center" onclick="generateCoverLetter()"><i class="fa-solid fa-wand-magic-sparkles"></i> Buat Cover Letter</button>
+            <div class="cover-result" id="coverResult"></div>
+            <div id="coverActions" style="display:none;margin-top:12px;display:none;gap:8px">
+              <button class="topbar-btn outline" style="width:100%;justify-content:center;margin-top:10px" onclick="requireCoverLetterPayment()"><i class="fa-solid fa-download"></i> Download Cover Letter</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- end #page-preview -->
+
+<script src="script.js"></script>
+<!-- ════════════════════════════════════════════
+     PAYWALL MODAL (muncul sebelum Print / Download PDF)
+════════════════════════════════════════════ -->
+<div class="paywall-overlay" id="paywallOverlay">
+  <div class="paywall-card">
+    <button class="paywall-close" onclick="closePaywall()"><i class="fa-solid fa-xmark"></i></button>
+
+    <!-- STATE 1: pilih metode bayar -->
+    <div class="paywall-state show" id="paywallStateChoose">
+      <div class="paywall-icon"><i class="fa-solid fa-lock"></i></div>
+      <h3 id="paywallTitle">Buka Akses Download</h3>
+      <p id="paywallDesc">CV kamu sudah jadi! Untuk menyimpan atau mencetak sebagai PDF, selesaikan pembayaran satu kali di bawah ini.</p>
+      <div class="paywall-price" id="paywallPrice">Rp 15.000 <span>/ sekali bayar</span></div>
+      <div class="paywall-methods">
+        <button class="paywall-method-btn" onclick="processPayment('QRIS')"><i class="fa-solid fa-qrcode"></i> Bayar dengan QRIS</button>
+        <button class="paywall-method-btn" onclick="processPayment('Transfer Bank')"><i class="fa-solid fa-building-columns"></i> Transfer Bank</button>
+        <button class="paywall-method-btn" onclick="processPayment('Kartu')"><i class="fa-solid fa-credit-card"></i> Kartu Kredit / Debit</button>
+      </div>
+      <p class="paywall-note">Demo: ini contoh tampilan paywall. Belum terhubung ke payment gateway sungguhan.</p>
+    </div>
+
+    <!-- STATE 2: sedang proses -->
+    <div class="paywall-state" id="paywallStateProcessing">
+      <div class="paywall-spinner"></div>
+      <h3 style="text-align:center">Memproses pembayaran…</h3>
+      <p style="text-align:center" id="paywallProcessingMethod">Mohon tunggu sebentar.</p>
+    </div>
+
+    <!-- STATE 3: berhasil -->
+    <div class="paywall-state" id="paywallStateSuccess">
+      <div class="paywall-success-icon"><i class="fa-solid fa-check"></i></div>
+      <h3 style="text-align:center">Pembayaran Berhasil!</h3>
+      <p style="text-align:center">Akses download/print CV kamu sudah terbuka.</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
